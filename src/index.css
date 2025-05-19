@@ -1,0 +1,135 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 60% 99%;
+    --foreground: 120 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 10% 10%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 144 100% 98%;
+
+    --secondary: 120 6% 93%;
+    --secondary-foreground: 142 72% 29%;
+
+    --muted: 120 6% 93%;
+    --muted-foreground: 120 5% 45%;
+
+    --accent: 142 50% 92%;
+    --accent-foreground: 142 72% 29%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 13% 90%;
+    --input: 120 13% 90%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 142 70% 96%;
+    --sidebar-foreground: 142 10% 15%;
+    --sidebar-primary: 142 72% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 50% 92%;
+    --sidebar-accent-foreground: 142 10% 10%;
+    --sidebar-border: 142 10% 90%;
+    --sidebar-ring: 142 72% 29%;
+  }
+
+  .dark {
+    --background: 120 15% 10%;
+    --foreground: 120 10% 95%;
+
+    --card: 120 15% 12%;
+    --card-foreground: 120 10% 95%;
+
+    --popover: 120 15% 12%;
+    --popover-foreground: 120 10% 95%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 144 100% 98%;
+
+    --secondary: 120 10% 20%;
+    --secondary-foreground: 120 10% 95%;
+
+    --muted: 120 10% 20%;
+    --muted-foreground: 120 10% 70%;
+
+    --accent: 120 10% 20%;
+    --accent-foreground: 120 10% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 10% 20%;
+    --input: 120 10% 20%;
+    --ring: 142 72% 29%;
+
+    --sidebar-background: 142 20% 15%;
+    --sidebar-foreground: 142 10% 90%;
+    --sidebar-primary: 142 72% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 20% 25%;
+    --sidebar-accent-foreground: 142 10% 90%;
+    --sidebar-border: 142 20% 25%;
+    --sidebar-ring: 142 72% 29%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emerald-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+}
