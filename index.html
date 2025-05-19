@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald School Nexus</title>
+    <meta name="description" content="School Management System">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="sidebar-title">Emerald School</h1>
+        </div>
+        
+        <nav class="sidebar-nav">
+          <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="students.html" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Students</span>
+          </a>
+          <a href="assessments.html" class="nav-item">
+            <i class="fas fa-book-open"></i>
+            <span>Assessments</span>
+          </a>
+          <a href="reports.html" class="nav-item">
+            <i class="fas fa-file-alt"></i>
+            <span>Reports</span>
+          </a>
+          <a href="teachers.html" class="nav-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Teachers</span>
+          </a>
+          <a href="analytics.html" class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Analytics</span>
+          </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-content">
+            <h3>Emerald School Nexus</h3>
+            <p>Version 1.0</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="content-container">
+          <!-- Header -->
+          <div class="content-header">
+            <h1>Dashboard</h1>
+            <p>Welcome back to Emerald School Nexus</p>
+            
+            <button class="btn btn-primary">
+              <i class="fas fa-check-square"></i>
+              Generate Reports
+            </button>
+          </div>
+          
+          <!-- Stats Cards -->
+          <div class="stats-grid">
+            <div class="stat-card emerald-gradient">
+              <div class="stat-info">
+                <p class="stat-title">Total Students</p>
+                <h3 class="stat-value">524</h3>
+                <div class="stat-trend positive">
+                  <span>+5.2%</span>
+                  <span class="trend-label">from last term</span>
+                </div>
+              </div>
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            
+            <div class="stat-card blue-gradient">
+              <div class="stat-info">
+                <p class="stat-title">Total Teachers</p>
+                <h3 class="stat-value">42</h3>
+              </div>
+              <div class="stat-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+            </div>
+            
+            <div class="stat-card amber-gradient">
+              <div class="stat-info">
+                <p class="stat-title">Assessments Completed</p>
+                <h3 class="stat-value">8</h3>
+                <div class="stat-trend positive">
+                  <span>+12.5%</span>
+                  <span class="trend-label">from last term</span>
+                </div>
+              </div>
+              <div class="stat-icon">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+            </div>
+            
+            <div class="stat-card purple-gradient">
+              <div class="stat-info">
+                <p class="stat-title">Pending Reports</p>
+                <h3 class="stat-value">3</h3>
+              </div>
+              <div class="stat-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Access Cards -->
+          <h2 class="section-title">Quick Access</h2>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Students</h3>
+                <div class="card-icon emerald-bg">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="card-content">
+                <p>Manage student records, add new students, and view performance data.</p>
+              </div>
+              <div class="card-footer">
+                <a href="students.html" class="btn btn-outline">Manage Students</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Assessments</h3>
+                <div class="card-icon blue-bg">
+                  <i class="fas fa-book-open"></i>
+                </div>
+              </div>
+              <div class="card-content">
+                <p>Create and manage assessments, input marks, and track performance.</p>
+              </div>
+              <div class="card-footer">
+                <a href="assessments.html" class="btn btn-outline">Manage Assessments</a>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Report Cards</h3>
+                <div class="card-icon amber-bg">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+              </div>
+              <div class="card-content">
+                <p>Generate student report cards based on assessment results.</p>
+              </div>
+              <div class="card-footer">
+                <a href="reports.html" class="btn btn-outline">Generate Reports</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recent Activities -->
+          <h2 class="section-title">Recent Activities</h2>
+          <div class="card activities-card">
+            <div class="card-content">
+              <ul class="activities-list">
+                <li class="activity-item">
+                  <div class="activity-icon emerald-bg">
+                    <i class="fas fa-book-open"></i>
+                  </div>
+                  <div class="activity-details">
+                    <p class="activity-title">Mid-Term Assessments Created</p>
+                    <p class="activity-description">Form 3 mid-term assessment has been added</p>
+                    <p class="activity-time">2 hours ago</p>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-icon blue-bg">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="activity-details">
+                    <p class="activity-title">New Students Added</p>
+                    <p class="activity-description">5 new students have been added to Form 1C</p>
+                    <p class="activity-time">Yesterday</p>
+                  </div>
+                </li>
+                <li class="activity-item">
+                  <div class="activity-icon amber-bg">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div class="activity-details">
+                    <p class="activity-title">Reports Generated</p>
+                    <p class="activity-description">End-term reports for Form 4 have been generated</p>
+                    <p class="activity-time">3 days ago</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

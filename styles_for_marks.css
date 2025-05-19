@@ -1,0 +1,146 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #2d3436;
+}
+
+.header {
+    background-color: #2ecc71;
+    padding: 25px 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 40px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #2ecc71;
+}
+
+.content-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #636e72;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #2ecc71;
+}
+
+.btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #636e72;
+    font-size: 0.9em;
+}
+
+/* Student list section */
+.student-list {
+    margin-top: 30px;
+    border-top: 2px solid #f1f3f5;
+    padding-top: 20px;
+}
+
+.student-list h3 {
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+/* Status message */
+.status-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

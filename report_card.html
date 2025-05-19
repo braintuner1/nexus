@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ugandan Primary School Report Card</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #006400; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>Student Report Card</h2>
+    <div id="report"></div>
+
+    <script>
+        async function loadReport(studentId) {
+            try {
+                const response = await fetch(`report_card.php?student_id=${studentId}`);
+                const data = await response.json();
+
+                if (data.error) {
+                    document.getElementById("report").innerHTML = `<p>${data.error}</p>`;
+                    return;
+                }
+
+                const student = data.student;
+                const subjects = data.subjects;
+                const average = data.average;
+                const remarks = data.remarks;
+
+                let html = `<p><strong>Name:</strong> ${student.name}</p>
+                            <p><strong>Class:</strong> ${student.class_name}</p>
+                            <p><strong>Term:</strong> ${student.term} | <strong>Year:</strong> ${student.year}</p>
+                            <table>
+                                <tr><th>Subject</th><th>Mark</th><th>Grade</th><th>Comment</th></tr>`;
+
+                subjects.forEach(sub => {
+                    html += `<tr>
+                                <td>${sub.subject}</td>
+                                <td>${sub.mark}</td>
+                                <td>${sub.grade}</td>
+                                <td>${sub.comment}</td>
+                            </tr>`;
+                });
+
+                html += `</table>
+                         <p><strong>Average Score:</strong> ${average}%</p>
+                         <p><strong>Remarks:</strong> ${remarks}</p>`;
+
+                document.getElementById("report").innerHTML = html;
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById("report").innerHTML = "<p>Failed to load report.</p>";
+            }
+        }
+
+        // Example: Load student with ID 1
+        loadReport(1);
+    </script>
+</body>
+</html>
