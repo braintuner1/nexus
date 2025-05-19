@@ -1,0 +1,89 @@
+
+/* Marks page specific styles */
+
+.filter-group-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: #444;
+}
+
+.marks-table-container {
+    transition: all 0.3s ease;
+}
+
+.marks-table-container.hidden {
+    display: none;
+}
+
+.marks-table th, 
+.marks-table td {
+    vertical-align: middle;
+}
+
+.marks-table .mark-input {
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+.marks-table .comment-select {
+    width: 100%;
+    max-width: 200px;
+}
+
+.grade-cell {
+    font-weight: 500;
+    text-align: center;
+}
+
+.statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.statistic-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 180px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.statistic-label {
+    font-size: 0.875rem;
+    color: #555;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.statistic-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#noSelectionMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #888;
+}
